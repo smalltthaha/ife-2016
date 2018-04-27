@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+section{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*表格样式*/
+table{
+	margin: 0 auto;
+	text-align:left;
+}
+tr >th{
+	background-color: black;
+	color: #fff;
+}
+tr:nth-child(odd){
+	background-color: rgba(7,17,27,0.3);
+}
+tr:nth-child(2),tr:nth-child(3),tr:nth-child(4){
+	color: red;
+}
+
+/*表单输入框样式*/
+input{
+	display:block;
+	width: 150px;
+	height: 18px;
+	margin: 40px auto;
+}
+input:focus{
+	transform: scale(2,2);
+	border: 2px solid #abcdef;
+	border-radius: 5px;
+	transition: transform 1.5s ease 0s;
+}
+
+/*模拟轮播*/
+.slide{
+	width: 300px;
+	height: 150px;
+	border: 1px solid black;
+	margin: 30px auto;
+	overflow: hidden;
+	position: relative;
+}
+input[type='radio']{
+	display: none;
+}
+label{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	background-color: gray;
+	font-size: 20px;
+	text-align:center;
+	line-height: 30px;
+	cursor: pointer;
+}
+.btn{
+	position: absolute;
+	bottom: 0;
+	right:0;
+}
+ul{
+	width: 1000px;
+}
+ul > li{
+	width: 300px;
+	height: 150px;
+	float: left;
+}
+.green{
+	background-color: green;
+}
+.blue{
+	background-color: blue;
+}
+.red{
+	background-color: red;
+}
+#label1:checked~ul{
+    transform: translateX(0);
+    transition: transform 1.5s ease 0s;
+}
+#label2:checked~ul{
+	transform: translateX(-300px);
+	transition: transform 1.5s ease 0s;
+}
+#label3:checked~ul{
+	transform: translateX(-600px);
+	transition: transform 1.5s ease 0s;
+}
